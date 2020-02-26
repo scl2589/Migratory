@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8">
+
+		<!-- P5 libraries -->
+		<script language="javascript" type="text/javascript" src="./libraries/p5.js"></script>
+
+		<!-- A-Frame libraries -->
+		<script language="javascript" type="text/javascript" src="./libraries/aframe.min.js"></script>
+
+		<!-- AFrameP5 library -->
+		<script language="javascript" type="text/javascript" src="./libraries/aframep5.js"></script>
+
+		<!-- P5 Sketch -->
+		<script src="../p5/addons/p5.sound.min.js"></script>
+		<script language="javascript" type="text/javascript" src="sketch.js"></script>
+		<script src="https://unpkg.com/aframe-animation-component@3.2.1/dist/aframe-animation-component.min.js"></script>
+    <!-- <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script> -->
+    <!-- <script src="https://unpkg.com/aframe-extras.ocean@%5E3.5.x/dist/aframe-extras.ocean.min.js"></script> -->
+    <script src="https://unpkg.com/aframe-gradient-sky@1.0.4/dist/gradientsky.min.js"></script>
+
+	</head>
+	<body>
+
+		<!-- container to hold our VR scene - make sure to give this element an ID of 'VRScene' -->
+		<a-scene id="VRScene">
+				<a-text
+					id="score-board"
+					position="-50 30 -40"
+					value="0"
+					color="black"
+					width="100px"
+					height="100px"
+				></a-text>
+			<!-- <a-sky id="theSky" src="#sky1" color="#197278"></a-sky> -->
+			<!-- <a-sky src="#sky" position="0 -200 0" color="#197278"></a-sky> -->
+			<!-- <a-ocean width="200" depth="200" density="40" opacity="1" position="0 -0.4 0"></a-ocean> -->
+      <a-entity id="sky" geometry="primitive: sphere; radius: 5000"
+                material="shader: gradient; topColor: 79 184 255; bottomColor: 252 249 242"
+                scale="-1 1 1"></a-entity>
+      <a-entity id="light" light="type: ambient; color: #ffffff"></a-entity>
+		</a-scene>
+
+	</body>
+</html>
